@@ -1,12 +1,15 @@
 
 .three{
+  display: flex;
+  justify-content: center;
+  align-items: center;
     background-color: ghostwhite;
     border: 2px solid mintcream;
     border-radius:5px;
+  padding:40px
 }
 .row{
-    padding: 50px;
-    width:100%;
+    width:50%;
     justify-content: end;
     height: 78vh;
     margin: 0px;
@@ -118,3 +121,13 @@
     background-color: #f7f5ec;
   }
   
+  h1 span::before{
+    content: '';
+    color: #aa3939;
+    animation: profile 5s infinite ;
+  }
+  @keyframes profile {
+    0% { content: 'singer'}
+    50% { content: 'magician'}
+    100% { content: 'storyteller'}
+  }

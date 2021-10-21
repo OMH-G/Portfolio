@@ -4,8 +4,11 @@ export default function Info() {
     return (
         <>
             <div class="three">
+            <div style={{'alignSelf':'baseline'}}>
+                <h1>I am a Web-Developer and <span></span></h1>
+            </div>
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3" style={{'width':'inherit'}}>
                         <div class="our-team">
                             <div class="picture">
                                 <img alt="new" class="img-fluid" src="https://picsum.photos/130/130?image=856" />
