@@ -8,8 +8,13 @@ export default function Info() {
                     <h1>I am a Web-Developer and <span></span></h1>
                 </div>
                 <div className="flex-prof-card">
-                    <div className="info-content">
-                        <div class="two">hi folks, this is typing animation using CSS</div>
+
+                    <div class="l-info-container">
+                        <h1>DASHES 😎</h1>
+                        <div class="content v4">
+                            <p>I dont' know dude, May be this could be important, May be not, who knows? I don't know, Do you know? Do you know somebody that knows this maybe, call me maybe.</p>
+                        </div>
+
                     </div>
                     <div class="profile-flipper">
                         <div class="card">
