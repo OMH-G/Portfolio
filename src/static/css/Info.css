@@ -1,7 +1,8 @@
 
 .three{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
     background-color: ghostwhite;
     border: 2px solid mintcream;
@@ -132,4 +133,122 @@
     100% { content: 'storyteller'}
   }
   
+  .flex-prof-card{
+    display : flex;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: auto;
+    height:inherit;
+  }
+
   
+
+
+  
+  @import url("https://fonts.googleapis.com/css?family=Bangers");
+  *, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .profile-flipper {
+    height: auto;
+    width: auto;
+
+  }
+  
+  .profile-flipper {
+    font-size: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bangers", cursive;
+  }
+  
+  .card {
+    height: 25rem;
+    width: 18rem;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 1s ease-in-out;
+    margin: 10px;
+    margin-right: 20vh;
+    border-radius:5vh;
+  }
+  
+  .front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+    background-image: linear-gradient(135deg, #00d8e7 0%, #764ba2 100%);
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    color: #fff;
+    perspective: 1000px;
+    box-shadow: 2px 4px 8px 1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    background-image: linear-gradient(135deg, #ddfa5b 0%, #764ba2 100%);
+
+  }
+  
+  .front > p, .back > p {
+    transform: translateZ(120px);
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  .info-content{
+    align-self:center;
+    margin-left: 10vh;
+    height: 25rem;
+    background-image:linear-gradient(452deg,midnightblue 50%, honeydew 135%);
+    width:inherit;
+    margin-right: 30vh;
+  }
+  
+  
+
+.two{
+  color: lime; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
+}
+
+.two:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
