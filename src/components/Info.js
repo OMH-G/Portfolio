@@ -9,13 +9,6 @@ export default function Info() {
                 </div>
                 <div className="flex-prof-card">
 
-                    <div class="l-info-container">
-                        <h1>DASHES 😎</h1>
-                        <div class="content v4">
-                            <p>I dont' know dude, May be this could be important, May be not, who knows? I don't know, Do you know? Do you know somebody that knows this maybe, call me maybe.</p>
-                        </div>
-
-                    </div>
                     <div class="profile-flipper">
                         <div class="card">
                             <div class="front">
@@ -25,6 +18,12 @@ export default function Info() {
                                 <p>BACK</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="l-info-container">
+                        <div class="info-content v4">
+                            <p>I dont' know dude, May be this could be important, May be not, who knows? I don't know, Do you know? Do you know somebody that knows this maybe, call me maybe.</p>
+                        </div>
+
                     </div>
 
                 </div>

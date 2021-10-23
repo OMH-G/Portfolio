@@ -1,4 +1,3 @@
-
 .three{
   display: flex;
   flex-direction: column;
@@ -153,18 +152,16 @@
     box-sizing: border-box;
   }
   
+  
   .profile-flipper {
     height: auto;
     width: auto;
-
-  }
-  
-  .profile-flipper {
     font-size: 5vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Bangers", cursive;
+    align-self:baseline;
   }
   
   .card {
@@ -210,66 +207,21 @@
   .info-content{
     align-self:center;
     margin-left: 10vh;
-    height: 25rem;
-    background-image:linear-gradient(452deg,midnightblue 50%, honeydew 135%);
-    width:inherit;
+    height: fit-content;
+background-image: (374deg,midnightblue -10%, honeydew 101%);
+width:inherit;
     margin-right: 30vh;
   }
-  
-  body {
-    font-family: Arial;
-    font-size: 1.5rem;
-    line-height: 150%;
-    background: #edf2f7;
-    color: #2d3748;
+  .l-info-container{
+    align-self:center;
   }
-  .l-info-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  .l-info-container h1 {
-    font-size: 2.2rem;
-  }
-  .l-info-container .instruction {
-    font-size: 1.8rem;
-    margin-bottom: 4rem;
-    font-style: italic;
-  }
-  .content {
+  .info-content {
     margin-bottom: 4em;
   }
-  .content p {
+  .info-content p {
     display: inline;
     background-repeat: no-repeat;
     transition: all 500ms ease-in-out;
-  }
-  .v1 p {
-    background-position: bottom left;
-    background-size: 0% 5px;
-    background-image: linear-gradient(#e53e3e, #e53e3e);
-    padding-bottom: 5px;
-  }
-  .v1:hover p {
-    background-size: 100% 5px;
-  }
-  .v2 p {
-    background-position: left;
-    background-size: 0% 100%;
-    background-image: linear-gradient(#f6e05e, #f6e05e);
-  }
-  .v2:hover p {
-    background-size: 100% 100%;
-  }
-  .v3 p {
-    color: transparent;
-    background-position: right;
-    background-size: 100% 100%;
-    background-image: linear-gradient(#a0aec0, #a0aec0);
-  }
-  .v3:hover p {
-    color: #000;
-    background-size: 0% 100%;
   }
   .v4 p {
     background-position: bottom left;
@@ -280,46 +232,3 @@
   .v4:hover p {
     background-size: 100% 3px;
   }
-  .v5 p {
-    background-position: center left;
-    background-size: 100% 3px;
-    background-image: linear-gradient(to right, #000, #000);
-    padding-bottom: 3px;
-  }
-  .v5:hover p {
-    background-size: 100% 100%;
-    color: #fff;
-    background-image: linear-gradient(to right, #e53e3e, #e53e3e);
-  }
-  .v6 p {
-    background-position: center left;
-    background-size: 100% 4px;
-    background-image: linear-gradient(to right, #000, #000);
-    padding-bottom: 4px;
-  }
-  .v6:hover p {
-    background-position: bottom left;
-    background-size: 100% 2px;
-    font-style: italic;
-  }
-  .v7 p {
-    background-position: left;
-    background-size: 0% 100%;
-    background-image: linear-gradient(to right, #f6e05e, #f6e05e);
-  }
-  .v7:hover p {
-    background-position: right;
-    background-size: 100% 100%;
-  }
-  .v8 p {
-    background-position: left;
-    background-size: 0% 100%;
-    background-image: linear-gradient(to right, #9ae6b4, #f6e05e);
-    padding-bottom: 4px;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-  }
-  .v8:hover p {
-    background-size: 100% 100%;
-  }
-  
