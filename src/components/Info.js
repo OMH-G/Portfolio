@@ -9,14 +9,14 @@ export default function Info() {
                 </div>
                 <div className="flex-prof-card">
 
-                    <div class="profile-flipper">
-                        <div class="card">
-                            <div class="front">
-                                <p>HOVER</p>
+                    <div className="info-flip-card">
+                        <div className="info-flip-card-inner">
+                            <div className="info-flip-card-front">
                             </div>
-                            <div class="back">
-                                <p>BACK</p>
+                            <div className="info-flip-card-back">
+
                             </div>
+
                         </div>
                     </div>
                     <div class="l-info-container">
