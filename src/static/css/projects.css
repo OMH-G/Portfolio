@@ -1,6 +1,6 @@
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-    margin: 50px;
+    margin: 8px;
     background-color: transparent;
     width: 300px;
     height: 250px;
@@ -28,7 +28,7 @@
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     flex-direction: column;
     
     position: absolute;
@@ -39,7 +39,7 @@
     backface-visibility: hidden;
   }
   .flip-card-front{
-    padding-left: 20px;
+    padding-left: 7px;
   }
   .flip-card-back{
     padding-right: 20px;
@@ -90,16 +90,17 @@
   .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
   }
   .videoWrapper iframe {
+    margin-right: auto;
+    margin-left: auto;
     position: absolute;
-    width: 90%;
-    height: 90%;
+    width: 98%;
+    height: 102%;
     top: 0;
     left: 0;
-    border-radius:20px;
-    border: 10px solid honeydew;
+    border-radius:12px;
+    border: 3px solid honeydew;
     
   }
   .updated{
