@@ -20,6 +20,10 @@
     transform-style: preserve-3d;
 
   }
+  a{
+    text-decoration:none;
+    color:black;
+  }
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -44,17 +48,15 @@
   .flip-card-back{
     padding-right: 20px;
     border: 5px solid yellow;
+    background-color:purple;
+    color: white;
+    transform: rotateY(180deg);
   }
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: turquoise;
     color: black;
-  }
-  .flip-card-back {
-    background-color:purple;
-    color: white;
-    transform: rotateY(180deg);
   }
   .cardfoot{
     border: 2px solid black;

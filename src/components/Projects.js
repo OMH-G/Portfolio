@@ -26,13 +26,12 @@ export default function Projects() {
             <>
                 Github Repositories
                 <div className="container">
-                    {console.log(generalrepo)}
                     {generalrepo.map((item) => {
                         return (
                             <div className="flip-card" key={item.id}>
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
-                                        <div className="name">{item.name}</div>
+                                        <div className="name">{item.name}📁</div>
                                         <div className="videoWrapper">
                                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lTTajzrSkCw?rel=0&autoplay=1&controls=0&loop=1&mute=1&playlist=lTTajzrSkCw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                         </div>
@@ -41,12 +40,12 @@ export default function Projects() {
                                         </div>
                                     </div>
                                     <div className="flip-card-back">
-                                        &copy;Project
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <div className="cardfoot">
-                                            Tap Me!
-                                        </div>
+                                        &copy;Github📚
+                                        <p  style={{'marginBottom':'0px'}}>{item.full_name}📜</p>
+                                        <p style={{'marginBottom':'0px'}}>✨{item.name}📁</p>
+                                        <a rel="noreferrer" target="_blank"href={`${item.html_url}`} className="cardfoot" >
+                                            Tap Me! 🌀
+                                        </a>
                                     </div>
 
                                 </div>
@@ -56,13 +55,12 @@ export default function Projects() {
                 </div>
                 Internship
                 <div className="container">
-                    {console.log(generalrepo)}
                     {internship.map((item) => {
                         return (
                             <div className="flip-card" key={item.id}>
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
-                                        <div className="name">{item.name}</div>
+                                        <div className="name">{item.name}📁</div>
                                         <div className="videoWrapper">
                                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lTTajzrSkCw?rel=0&autoplay=1&controls=0&loop=1&mute=1&playlist=lTTajzrSkCw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                         </div>
@@ -71,12 +69,12 @@ export default function Projects() {
                                         </div>
                                     </div>
                                     <div className="flip-card-back">
-                                        &copy;Project
-                                        <p>Architect & Engineer</p>
-                                        <p>We love that guy</p>
-                                        <div className="cardfoot">
-                                            Tap Me!
-                                        </div>
+                                        &copy;Github(Internship)📓
+                                        <p  style={{'marginBottom':'0px'}}>{item.full_name}📜</p>
+                                        <p style={{'marginBottom':'0px'}}>✨{item.name}📁</p>
+                                        <a rel="noreferrer" target="_blank"href={`${item.html_url}`} className="cardfoot" >
+                                            Tap Me! 🌀
+                                        </a>
                                     </div>
 
                                 </div>
@@ -91,32 +89,32 @@ export default function Projects() {
         return (
             <>
                 Github Repositories
-                <div class="card" aria-hidden="true">
-                    <div class ="card-body">
-                    <h5 class ="card-title placeholder-glow">
-                    <span class ="placeholder col-6"></span>
+                <div className="card" aria-hidden="true">
+                    <div className="card-body">
+                    <h5 className="card-title placeholder-glow">
+                    <span className="placeholder col-6"></span>
                     </h5>
-                    <p class ="card-text placeholder-glow">
-                    <span class ="placeholder col-7"></span>
-                    <span class ="placeholder col-4"></span>
-                    <span class ="placeholder col-4"></span>
-                    <span class ="placeholder col-6"></span>
-                    <span class ="placeholder col-8"></span>
+                    <p className="card-text placeholder-glow">
+                    <span className="placeholder col-7"></span>
+                    <span className="placeholder col-4"></span>
+                    <span className="placeholder col-4"></span>
+                    <span className="placeholder col-6"></span>
+                    <span className="placeholder col-8"></span>
                     </p>
                     </div>
                 </div>
                 Internship
-                <div class="card" aria-hidden="true">
-                    <div class ="card-body">
-                    <h5 class ="card-title placeholder-glow">
-                    <span class ="placeholder col-6"></span>
+                <div className="card" aria-hidden="true">
+                    <div className="card-body">
+                    <h5 className="card-title placeholder-glow">
+                    <span className="placeholder col-6"></span>
                     </h5>
-                    <p class ="card-text placeholder-glow">
-                    <span class ="placeholder col-7"></span>
-                    <span class ="placeholder col-4"></span>
-                    <span class ="placeholder col-4"></span>
-                    <span class ="placeholder col-6"></span>
-                    <span class ="placeholder col-8"></span>
+                    <p className="card-text placeholder-glow">
+                    <span className="placeholder col-7"></span>
+                    <span className="placeholder col-4"></span>
+                    <span className="placeholder col-4"></span>
+                    <span className="placeholder col-6"></span>
+                    <span className="placeholder col-8"></span>
                     </p>
                     </div>
                 </div>
