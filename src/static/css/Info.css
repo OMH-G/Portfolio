@@ -274,7 +274,7 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
     backface-visibility: hidden;
   }
   .info-flip-card-front{
-    padding-left: 20px;
+    /* padding-left: 20px; */
     border:5px solid honeydew;
   }
   .info-flip-card-back{
@@ -296,3 +296,11 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
     background-image:linear-gradient(118deg,#FFDEE9,#B5FFFC);
   }
   
+  #info-1{
+    flex:0.7;
+    background-image:linear-gradient(407deg,ghostwhite -10%,#4A569D 56%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    width:150px;
+  }

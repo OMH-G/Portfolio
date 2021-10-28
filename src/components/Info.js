@@ -12,6 +12,9 @@ export default function Info() {
                     <div className="info-flip-card">
                         <div className="info-flip-card-inner">
                             <div className="info-flip-card-front">
+                                <div id="info-1">
+
+                                </div>
                             </div>
                             <div className="info-flip-card-back">
 
