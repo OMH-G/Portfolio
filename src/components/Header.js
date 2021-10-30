@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import {useState} from 'react'
-export default function Starting() {
+export default function Starting(props) {
     const [active, setactive] = useState("intro")
     const activechanger=(value)=>{
         setactive(value);
+        props.conchange(value);
     }
     return (
         <>

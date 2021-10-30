@@ -6,6 +6,7 @@ import Project from './components/Projects';
 import Strip from './components/Strip';
 import Info from './components/Info';
 import Blog from './components/Blog';
+import {useState} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,15 +14,33 @@ import {
 } from "react-router-dom";
 import Report from './components/Report';
 function App() {
+  const [bgcontent, setbgcontent] = useState('linear-gradient(118deg,#FFDEE9,#B5FFFC)')
+  const contentstate=(route)=>{
+    if(route==='intro'){
+    setbgcontent('linear-gradient(118deg,#FFDEE9,#B5FFFC)');
+    }
+    else if(route==='proj'){
+      setbgcontent('linear-gradient(#acb6e5,#86fde8)')
+    }
+    else if(route==='game'){
+      setbgcontent('linear-gradient(#ffe259,#ffe259)')
+    }
+    else if(route==='blog'){
+      setbgcontent('linear-gradient(#DA22FF,#9733EE)')
+    }
+    else{
+      setbgcontent('linear-gradient(#e65c00,#F9D423)')
+    }
+  }
   return (
     <Router>
       <div className="outer-flex">
         <Strip />
         <div className="inner-flex">
           <div id="header">
-            <Header />
+            <Header conchange={contentstate}/>
           </div>
-          <div id="content">
+          <div id="content" style={{'backgroundImage':bgcontent}}>
             <Switch>
               <Route  exact path="/">
                 <Info />
