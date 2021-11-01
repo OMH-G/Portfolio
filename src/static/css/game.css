@@ -1,4 +1,4 @@
-.game-container{
+/* .game-container{
     border:2px solid blue ;
     width:30vh ;
     margin-left: auto;
@@ -6,7 +6,62 @@
     margin-bottom: auto;
     margin-top:25vh;
     border-radius: 10px;
-}
-/* #content{
-    background-image: linear-gradient(#DA22FF,#9733EE) !important;
 } */
+.game-html, .game-body {
+    height: 100%;
+    background: #2F2F31;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+  }
+  
+  #uc {
+    color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+    text-align: center;
+    font-size: 4rem;
+    height: 100px;
+    top: 50%;
+    position: relative;
+    margin-top: -50px;
+  }
+  #uc span {
+    text-shadow: 10px 10px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  #loading {
+    width: 400px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid white;
+    border-radius: 50px;
+    margin: 40px auto;
+    box-shadow: inset 2px 2px 5px 0px rgba(0, 0, 0, 0.8);
+  }
+  #loading #wiggle {
+    width: 80px;
+    height: 18px;
+    border: 1px solid #aaa;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    margin-left: 0px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#f6f6f6",GradientType=0 );
+    animation: wiggle 5s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 318px;
+    }
+    100% {
+      margin-left: 0px;
+    }
+  }

@@ -300,4 +300,15 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
     margin-right: auto;
     margin-top:10px;
     width:150px;
+    border-radius: 50%;
+    height:150px
+  }
+  #info-1-name{
+    width:100px;
+    border:2px solid red;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    border-radius:20px;
+    background-image: linear-gradient(#B993D6,#8CA6DB);
   }

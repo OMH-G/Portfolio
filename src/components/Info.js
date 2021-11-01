@@ -15,6 +15,9 @@ export default function Info() {
                                 <div id="info-1">
 
                                 </div>
+                                <div id="info-1-name">
+                                    OMH-G
+                                </div>
                             </div>
                             <div className="info-flip-card-back">
 
