@@ -88,6 +88,7 @@ export default function Projects() {
     else {
         return (
             <>
+            <div className="d-flex align-items-center flex-column">
                 Github Repositories
                 <div className="card" aria-hidden="true">
                     <div className="card-body">
@@ -117,6 +118,7 @@ export default function Projects() {
                     <span className="placeholder col-8"></span>
                     </p>
                     </div>
+                </div>
                 </div>
             </>
         )
