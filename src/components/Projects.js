@@ -60,7 +60,7 @@ export default function Projects() {
                             <div className="flip-card" key={item.id}>
                                 <div className="flip-card-inner">
                                     <div className="flip-card-front">
-                                        <div className="name">{item.name}📁</div>
+                                        <div >{item.name}📁</div>
                                         <div className="videoWrapper">
                                             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lTTajzrSkCw?rel=0&autoplay=1&controls=0&loop=1&mute=1&playlist=lTTajzrSkCw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                         </div>

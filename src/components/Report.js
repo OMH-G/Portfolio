@@ -4,16 +4,44 @@ import { useState } from 'react';
 export default function Report() {
     const [emoji, setemoji] = useState("");
     const [suggest, setsuggest] = useState("");
+    const [count, setcount] = useState(0);
+    var value;
+    const updatelocal=(val)=>{
+        if(emoji!==val){
+            console.log(emoji,val);
+            if(localStorage.getItem(emoji)===null ||localStorage.getItem(emoji)<=0){
+                localStorage.setItem(emoji,0);
+            }
+            else{
+            localStorage.setItem(emoji,parseInt(localStorage.getItem(emoji))-1);
+            
+            }setcount(1);
+        }
+        if(count===1){
+        if(localStorage.getItem(val)==null){
+        localStorage.setItem(val,0);
+        }
+        else{
+            var v=parseInt(localStorage.getItem(val))+1;
+            localStorage.setItem(val,v);
+        }
+        setcount(-1);
+    }
+    }
     const cemoji=(val)=>{
         setemoji(val);
+        if(count===0){
+        setcount(1);
+        }
+        else{
+            setcount(-1);
+        }
+        updatelocal(val);
     }
     const suggesty=(val)=>{
         setsuggest(val);
     }
-    function sub(){
-        console.log(emoji);
-        console.log(suggest);
-    }
+    
     return (
         <>
             <div className="taken">
@@ -34,6 +62,7 @@ export default function Report() {
                                         <label for="1">
                                             <input class="radio" type="radio" name="feedback" id="1" value="1" />
                                             <span>🙁</span>
+                                            {localStorage.getItem('sad')}
                                         </label>
                                     </div>
 
@@ -41,6 +70,7 @@ export default function Report() {
                                         <label for="2">
                                             <input class="radio" type="radio" name="feedback" id="2" value="2" />
                                             <span>😶</span>
+                                            {localStorage.getItem('noob')}
                                         </label>
                                     </div>
 
@@ -48,6 +78,7 @@ export default function Report() {
                                         <label for="3">
                                             <input class="radio" type="radio" name="feedback" id="3" value="3" />
                                             <span>😁</span>
+                                            {localStorage.getItem('mhappy')}
                                         </label>
                                     </div>
 
@@ -55,6 +86,7 @@ export default function Report() {
                                         <label for="4">
                                             <input class="radio" type="radio" name="feedback" id="4" value="4" />
                                             <span>😍</span>
+                                            {localStorage.getItem('ehappy')}
                                         </label>
                                     </div>
 
@@ -63,7 +95,7 @@ export default function Report() {
                         </div>
                     </div>
 
-                    <button className="btn" onClick={()=>sub()}>Submit</button>
+                    <button className="btn" >Submit</button>
                 </div>
             </div>
         </>
