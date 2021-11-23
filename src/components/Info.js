@@ -1,6 +1,48 @@
 import React from 'react'
 import '../static/css/Info.css'
 export default function Info() {
+    var deploys = [
+        {
+            image: 'https://www.inlifehealthcare.com/wp-content/uploads/2016/03/To-Do-List.png',
+            source: 'https://todoapplistvslist.herokuapp.com/'
+        },
+        {
+            image: 'https://cdn-icons-png.flaticon.com/512/1457/1457806.png',
+            source: 'https://bankrupthone.herokuapp.com'
+        },
+
+    ]
+    var certificates = [{
+        name: 'Intro to Datascience',
+        image: 'https://mentocta.com/wp-content/uploads/2016/08/datascience.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/7WWF4ZWB7A4Q'
+    },
+    {
+        name: 'Using Databases with python',
+        image: 'https://www.nicepng.com/png/full/207-2073547_sql-server-icon-png-29-transparent-background-database.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/9LYY8GC2F6BN'
+    },
+    {
+        name: 'Visualizing Data with python',
+        image: 'https://freepngimg.com/thumb/technology/63583-visualization-data-illustration-png-image-high-quality.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/72FQJLZELQBL'
+    },
+    {
+        name: 'Using python to access web ',
+        image: 'https://www.pngmart.com/files/7/Web-Design-Transparent-Images-PNG.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/TY2HVH899V4L'
+    },
+    {
+        name: 'Data Structure with python',
+        image: 'http://inspireclasses.com/wp-content/uploads/2019/01/ds.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/KLRMTQFWQ6KT'
+    },
+    {
+        name: 'Python for Everybody',
+        image: 'http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
+        source: 'https://www.coursera.org/account/accomplishments/certificate/UUTQFQXBJP6U'
+    },
+    ];
     return (
         <>
             <div className="three">
@@ -75,33 +117,20 @@ export default function Info() {
                             <div style={{ 'display': 'flex', 'flexWrap': 'wrap', 'flexDirection': 'column', 'alignItems': 'center', 'backgroundColor': 'honeydew', 'padding': '10px', 'borderRadius': '20px' }}>
                                 <div>Deploys</div>
                                 <div style={{ 'display': 'flex', 'flexWrap': 'wrap', 'justifyContent': 'center' }}>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach">
-                                            <div class="tiles-overlay">
+                                    {deploys.map(item =>
+                                        <div class="wrapper-card my-1 mx-1">
+                                            <div class="tiles-card root-wrapper-card ach">
+                                                <div class="tiles-overlay">
 
+                                                </div>
+                                                <div class="tiles-circle">
+                                                    <img src={item.image} data-v-5e99277a="" alt="" />
+                                                    <p>
+                                                        <a href={item.source}>Enter</a>
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="tiles-circle">
-                                                <img src="https://www.inlifehealthcare.com/wp-content/uploads/2016/03/To-Do-List.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://todoapplistvslist.herokuapp.com/">Enter</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card">
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="https://cdn-icons-png.flaticon.com/512/1457/1457806.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://bankrupthone.herokuapp.com/">Enter</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </div>)}
 
                                 </div>
                             </div>
@@ -129,105 +158,36 @@ export default function Info() {
                                     </div>
                                 </div>
                                 <div className="certificates my-10">
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach" >
-                                            <div class="tiles-overlay">
+                                    {certificates.map((item) =>
+                                        <div class="wrapper-card my-1 mx-1">
+                                            <div class="tiles-card root-wrapper-card ach" >
+                                                <div class="tiles-overlay">
 
+                                                </div>
+                                                <div class="tiles-circle" style={{ 'backgroundColor': 'bisque' }}>
+                                                    <img src={item.image} data-v-5e99277a="" alt="" />
+                                                    <p>
+                                                        <a href={item.source} target="blank">🔦</a>
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div class="tiles-circle" style={{'backgroundColor':'bisque'}}>
-                                                <img src="https://mentocta.com/wp-content/uploads/2016/08/datascience.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/7WWF4ZWB7A4Q" target="blank">🔦</a>
-                                                </p>
+                                            <div className="newdata">
+                                                {item.name}
                                             </div>
-                                        </div>
-                                        <div className="newdata">
-                                            Intro to Data Science in Python
-                                        </div>
-                                    </div>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach" >
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="https://www.pngmart.com/files/7/Web-Design-Transparent-Images-PNG.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/TY2HVH899V4L" target="blank">🔦</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="newdata">
-                                            Using Python to access web data
-                                        </div>
-                                    </div>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach">
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="https://lh3.googleusercontent.com/proxy/V5mtwsci_kly_BB8xFu2vSaz0775-05gtMYoCmj8rTk6Z44OfpxjBSCwgjh4phU_5IvZb2XxHE4aZ2ln-J1J5pOt6vM90b2OML-kQPYuucUav1uyShRsA5iq6hQ7STyk" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/9LYY8GC2F6BN" target="blank">🔦</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="newdata">
-                                            Using Databases with python
-                                        </div>
-                                    </div>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach">
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="https://freepngimg.com/thumb/technology/63583-visualization-data-illustration-png-image-high-quality.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/72FQJLZELQBL" target="blank">🔦</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="newdata">
-                                            Understanding and Visualizing Data with python                                        </div>
-                                    </div>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach">
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="http://inspireclasses.com/wp-content/uploads/2019/01/ds.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/KLRMTQFWQ6KT" target="blank">🔦</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="newdata">
-                                            Python Data structure                                        </div>
-                                    </div>
-                                    <div class="wrapper-card my-1 mx-1">
-                                        <div class="tiles-card root-wrapper-card ach">
-                                            <div class="tiles-overlay">
-
-                                            </div>
-                                            <div class="tiles-circle">
-                                                <img src="http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png" data-v-5e99277a="" alt=""/>
-                                                <p>
-                                                    <a href="https://www.coursera.org/account/accomplishments/certificate/UUTQFQXBJP6U" target="blank">🔦</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="newdata">Python Programming for everybody</div>
-                                    </div>
+                                        </div>)}
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                    <div class="slider-body">
 
+                        <div class="top-container-slider">
+                            🖐That's All Folks!!😀
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         </>

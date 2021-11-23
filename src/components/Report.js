@@ -44,6 +44,7 @@ export default function Report() {
     
     return (
         <>
+        
             <div className="taken">
                 <div className="card-do">
                     <h4>Bug Fixing | Suggestion </h4>
