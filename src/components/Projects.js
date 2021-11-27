@@ -24,7 +24,7 @@ export default function Projects() {
         }
         return (
             <>
-                Github Repositories
+               <div style={{'width':'fit-content','marginLeft':'auto','marginRight':'auto'}}>Github Repositories</div>
                 <div className="container">
                     {generalrepo.map((item) => {
                         return (
@@ -53,7 +53,7 @@ export default function Projects() {
                         );
                     })}
                 </div>
-                Internship
+                <div style={{'width':'fit-content','marginLeft':'auto','marginRight':'auto'}}>Internship</div>
                 <div className="container">
                     {internship.map((item) => {
                         return (
