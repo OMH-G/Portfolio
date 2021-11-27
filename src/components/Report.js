@@ -8,7 +8,6 @@ export default function Report() {
     var value;
     const updatelocal=(val)=>{
         if(emoji!==val){
-            console.log(emoji,val);
             if(localStorage.getItem(emoji)===null ||localStorage.getItem(emoji)<=0){
                 localStorage.setItem(emoji,0);
             }
@@ -50,7 +49,7 @@ export default function Report() {
                     <h4>Bug Fixing | Suggestion </h4>
                     <div class="form-group">
                         <label for="feedbackform">Example textarea</label>
-                        <textarea class="form-control" id="feedbackform" rows="3" placeholder="Suggestion" onChange={(val)=>{suggesty(val.target.value)}}></textarea>
+                        <input type="text" style={{'width':'-webkit-fill-available'}} class="form-control" id="feedbackform" rows="3" placeholder="Suggestion" onChange={(val)=>{suggesty(val.target.value)}}></input>
                     </div>
                     <div className="rating-container">
                         <small>Interested then rate it !!!</small>
