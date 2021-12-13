@@ -1,6 +1,8 @@
 import React from 'react'
 import '../static/css/Info.css'
+import { useState } from 'react';
 export default function Info() {
+    var providers=['coursera','IBM'];
     var deploys = [
         {
             image: 'https://www.inlifehealthcare.com/wp-content/uploads/2016/03/To-Do-List.png',
@@ -12,7 +14,7 @@ export default function Info() {
         },
 
     ]
-    var certificates = [{
+    var certificates = {'coursera':[{
         name: 'Intro to Datascience',
         image: 'https://mentocta.com/wp-content/uploads/2016/08/datascience.png',
         source: 'https://www.coursera.org/account/accomplishments/certificate/7WWF4ZWB7A4Q'
@@ -41,8 +43,18 @@ export default function Info() {
         name: 'Python for Everybody',
         image: 'http://assets.stickpng.com/images/5848152fcef1014c0b5e4967.png',
         source: 'https://www.coursera.org/account/accomplishments/certificate/UUTQFQXBJP6U'
-    },
-    ];
+    }
+],
+'IBM':[{
+    name:'sldkf',
+    image:'sldfk',
+    source:'sldfl'
+}]
+};
+    const [changeprov, setchangeprov] = useState("coursera");
+    function provselect(value){
+        setchangeprov(value);
+    }
     return (
         <>
             <div className="three">
@@ -159,8 +171,14 @@ export default function Info() {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="title-flex-course">
+                                    <div className="course-comp">
+                                        {providers.map((item)=>
+                                            <div className="nameofprov" onClick={()=>provselect(item)}>{item}</div>
+                                        )}
+                                    </div>
                                 <div className="certificates my-10">
-                                    {certificates.map((item) =>
+                                    {certificates[changeprov].map((item) =>
                                         <div class="wrapper-card my-1 mx-1">
                                             <div class="tiles-card root-wrapper-card ach" >
                                                 <div class="tiles-overlay">
@@ -177,6 +195,7 @@ export default function Info() {
                                                 {item.name}
                                             </div>
                                         </div>)}
+                                </div>
                                 </div>
                             </div>
 

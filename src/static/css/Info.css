@@ -6,11 +6,26 @@
     border-radius:5px;
   height:-webkit-fill-available;
 }
+.certificates{
+  overflow-y: auto !important;
+  height:75vh;
+}
+.nameofprov{
+  border: 2px solid red;
+  border-radius: 20px;
+  background-color:gainsboro ;
+  width: -webkit-fill-available;
+}
+
 .row{
     width:50%;
     justify-content: end;
     height: 78vh;
     margin: 0px;
+}
+.course-comp{
+  display:  flex;
+  justify-content: space-around;
 }
 .our-team {
     padding: 30px 0 40px;
