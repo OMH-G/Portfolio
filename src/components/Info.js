@@ -94,7 +94,6 @@ export default function Info() {
                                     </div>
                                 </div>
                                 
-}
                                 <div class="bar">
                                     <div class="info">
                                         <span>CSS</span>
