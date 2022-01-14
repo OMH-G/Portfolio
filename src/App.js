@@ -34,8 +34,6 @@ function App() {
   }
   return (
     <Router>
-      <div className="outer-flex">
-        <Strip />
         <div className="inner-flex">
           <div id="header">
             <Header conchange={contentstate}/>
@@ -63,7 +61,6 @@ function App() {
             <Footer />
           </div>
         </div>
-      </div>
     </Router>
   );
 }
