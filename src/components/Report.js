@@ -5,7 +5,6 @@ export default function Report() {
     const [emoji, setemoji] = useState("");
     const [suggest, setsuggest] = useState("");
     const [count, setcount] = useState(0);
-    var value;
     const updatelocal=(val)=>{
         if(emoji!==val){
             if(localStorage.getItem(emoji)===null ||localStorage.getItem(emoji)<=0){

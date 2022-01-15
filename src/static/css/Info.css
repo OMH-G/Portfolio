@@ -184,9 +184,10 @@
     transform-style: preserve-3d;
     position: relative;
     transition: all 1s ease-in-out;
-    margin: 10px;
-    margin-right: 20vh;
+    margin-right: auto;
+    margin-left: auto;
     border-radius:5vh;
+
   }
   
   .front, .back {

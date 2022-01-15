@@ -11,7 +11,7 @@ export default function Projects() {
         axios.get('https://api.github.com/users/OMH-G/repos')
             .then((response) => { setState(response) });
     }
-    if (data.length !== 0) {
+    if (data.length!==0) {
         const store = data.data;
         const generalrepo = [], internship = [];
         for (let i = 0; i < store.length; i++) {

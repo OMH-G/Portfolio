@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Game from './components/Game';
 import Project from './components/Projects';
-import Strip from './components/Strip';
 import Info from './components/Info';
 import Blog from './components/Blog';
 import {useState} from 'react'
