@@ -1,8 +1,19 @@
 import React from 'react'
 import '../static/css/Info.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+const axios=require( 'axios');
 export default function Info() {
     var providers = ['coursera', 'IBM'];
+    const [cert, setcert] = useState({});
+    const [value, setvalue] = useState([]);
+    useEffect(() => {
+        axios.get('https://mongodbportfolioapi.herokuapp.com/')
+        .then(data=>{
+            setcert(data.data[1].certificates);
+            setvalue(data.data[1].certificates['coursera'])
+        })
+    }, [])
+    
     var deploys = [
         {
             id:1,
@@ -59,7 +70,9 @@ export default function Info() {
     const [changeprov, setchangeprov] = useState("coursera");
     function provselect(value) {
         setchangeprov(value);
+        setvalue(cert[value]);
     }
+
     return (
         <>
             <div className="three">
@@ -191,7 +204,7 @@ export default function Info() {
                                         )}
                                     </div>
                                     <div className="certificates my-10">
-                                        {certificates[changeprov].map((item) =>
+                                        {value.map((item) =>
                                             <div className="wrapper-card my-1 mx-1" key={item.id}>
                                                 <div className="tiles-card root-wrapper-card ach" >
                                                     <div className="tiles-overlay">
@@ -210,21 +223,36 @@ export default function Info() {
                                             </div>)}
                                     </div>
                                 </div>
-                                <div className="slider">
-                                    <input type="radio" name="slide_switch" id="id1" checked="checked" readOnly />
-                                    <label htmlFor="id1">
-                                        <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" width="50" alt='' />
-                                    </label>
-                                    <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" alt=''/>
+                                <div className="wrap">
 
-                                    <input type="radio" name="slide_switch" id="id2"  />
-                                    <label htmlFor="id2">
-                                        <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" alt='' width="50" />
-                                    </label>
-                                    <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" alt='' />
+		<div className="slider">
 
+			<input type="radio" id="item1" name="sBtn" />
+			<input type="radio" id="item2" name="sBtn" />
+			<input type="radio" id="item3" name="sBtn" />
+			<input type="radio" id="item4" name="sBtn" />
+			<input type="radio" id="item5" name="sBtn" />
 
-                                </div>
+			<ul className="img">
+				<li><img src="https://picsum.photos/600/400?image=501" alt=""/></li>
+				<li><img src="https://picsum.photos/600/400?image=502" alt=""/></li>
+				<li><img src="https://picsum.photos/600/400?image=503" alt=""/></li>
+				<li><img src="https://picsum.photos/600/400?image=504" alt=""/></li>
+				<li><img src="https://picsum.photos/600/400?image=505" alt=""/></li>
+			</ul>
+
+			<div className="btns">
+				<label for="item1">item1</label>
+				<label for="item2">item2</label>
+				<label for="item3">item3</label>
+				<label for="item4">item4</label>
+				<label for="item5">item5</label>
+			</div>
+
+		</div>
+
+	</div>
+
                             </div>
 
                         </div>

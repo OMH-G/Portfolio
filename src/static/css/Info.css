@@ -1178,62 +1178,63 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
 
 }
 
-.slider{
-	width: -webkit-fill-available; /*Same as width of the large image*/
-	position: relative;
-	/*Instead of height we will use padding*/
-	padding-top: 340px; /*>>>In this problem if more 5 images :)<<<*/
-	/*Lets add a shadow*/
-	box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.75);
-}
 
 
-/*Last thing remaining is to add transitions*/
-.slider>img{
-	position: absolute;
-	left: 0; top: 0;
-	transition: all 0.5s;
-  width: 98%;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+.wrap {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.slider input[name='slide_switch'] {
-	display: none;
+.wrap .slider {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
 }
-
-.slider label {
-	/*Lets add some spacing for the thumbnails*/
-	margin: 18px 0 0 18px;
-	border: 3px solid #999;
-	float: left;
-	cursor: pointer;
-	transition: all 0.5s;
-	/*Default style = low opacity*/
-	opacity: 0.6;
+.wrap .slider .img {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-.slider label img{
-	display: block;
+.wrap .slider .btns {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 80%;
+  display: flex;
+  transform: translateX(-50%);
 }
-
-/*Time to add the click effects*/
-.slider input[name='slide_switch']:checked+label {
-	border-color: #666;
-	opacity: 1;
+.wrap .slider .btns label {
+  flex: 1;
+  height: 24px;
+  margin: 0 3px;
+  border: 1px solid #fff;
+  font-size: 0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
-/*Clicking any thumbnail now should change its opacity(style)*/
-/*Time to work on the main images*/
-.slider input[name='slide_switch'] ~ img {
-	opacity: 0;
-	transform: scale(1.1);
+.wrap .slider .btns label:hover {
+  background-color: #fff;
 }
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
-.slider input[name='slide_switch']:checked+label+img {
-	opacity: 1;
-	transform: scale(1);
+.wrap .slider input[type=radio] {
+  display: none;
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
 }
-/*Clicking on any thumbnail now should activate the image related to it*/
-
-/*We are done :)*/
+.wrap .slider input[type=radio]:nth-child(1):checked ~ ul.img {
+  transform: translateX(0px);
+}
+.wrap .slider input[type=radio]:nth-child(2):checked ~ ul.img {
+  transform: translateX(-600px);
+}
+.wrap .slider input[type=radio]:nth-child(3):checked ~ ul.img {
+  transform: translateX(-1200px);
+}
+.wrap .slider input[type=radio]:nth-child(4):checked ~ ul.img {
+  transform: translateX(-1800px);
+}
+.wrap .slider input[type=radio]:nth-child(5):checked ~ ul.img {
+  transform: translateX(-2400px);
+}
