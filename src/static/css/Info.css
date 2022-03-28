@@ -341,122 +341,7 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
   color: #fff;
   background: #6665ee;
 }
-.skill-bars{
-  padding: 25px 30px;
-  width: -webkit-fill-available;
-  background: #fff;
-  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-  border-radius: 10px;
-  margin-bottom:10px
-}
-.skill-bars .bar{
-  margin: 20px 0;
-}
-.skill-bars .bar:first-child{
-  margin-top: 0px;
-}
-.skill-bars .bar .info{
-  margin-bottom: 5px;
-}
-.skill-bars .bar .info span{
-  font-weight: 500;
-  font-size: 17px;
-  opacity: 0;
-  animation: showText 0.5s 1s linear forwards;
-}
-@keyframes showText {
-  100%{
-    opacity: 1;
-  }
-}
-.skill-bars .bar .progress-line{
-  height: 10px;
-  width: 100%;
-  background: #f0f0f0;
-  position: relative;
-  transform: scaleX(0);
-  transform-origin: left;
-  border-radius: 10px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
-              0 1px rgba(255,255,255,0.8);
-  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-}
-@keyframes animate {
-  100%{
-    transform: scaleX(1);
-  }
-}
-.bar .progress-line span{
-  height: 100%;
-  position: absolute;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: #6665ee;
-  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
-}
-.bar .progress-line.html span{
-  width: 90%;
-}
-.bar .progress-line.css span{
-  width: 60%;
-}
-.bar .progress-line.jquery span{
-  width: 85%;
-}
-.bar .progress-line.python span{
-  width: 50%;
-}
-.bar .progress-line.mysql span{
-  width: 75%;
-}
-.progress-line span::before{
-  position: absolute;
-  content: "";
-  top: -10px;
-  right: 0;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-color: #000;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-.progress-line span::after{
-  position: absolute;
-  top: -28px;
-  right: 0;
-  font-weight: 500;
-  background: #000;
-  color: #fff;
-  padding: 1px 8px;
-  font-size: 12px;
-  border-radius: 3px;
-  opacity: 0;
-  animation: showText2 0.5s 1.5s linear forwards;
-}
-@keyframes showText2 {
-  100%{
-    opacity: 1;
-  }
-}
-.progress-line.html span::after{
-  content: "90%";
-}
-.progress-line.css span::after{
-  content: "60%";
-}
-.progress-line.jquery span::after{
-  content: "85%";
-}
-.progress-line.python span::after{
-  content: "50%";
-}
-.progress-line.mysql span::after{
-  content: "75%";
-}
+
 .acheive-flex{
   width: -webkit-fill-available;
 }
@@ -1178,63 +1063,17 @@ background-image: (374deg,midnightblue -10%, honeydew 101%);
 
 }
 
+.image-slider{
+  padding: 10%;
 
-
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
-.wrap {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.wrap .slider {
-  position: relative;
-  width: 600px;
-  height: 400px;
-  overflow: hidden;
+#carouselExampleIndicators{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
-.wrap .slider .img {
-  display: flex;
-  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-}
-.wrap .slider .btns {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  width: 80%;
-  display: flex;
-  transform: translateX(-50%);
-}
-.wrap .slider .btns label {
-  flex: 1;
-  height: 24px;
-  margin: 0 3px;
-  border: 1px solid #fff;
-  font-size: 0;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-.wrap .slider .btns label:hover {
-  background-color: #fff;
-}
-.wrap .slider input[type=radio] {
-  display: none;
-  position: absolute;
-  left: -9999em;
-  top: -9999em;
-}
-.wrap .slider input[type=radio]:nth-child(1):checked ~ ul.img {
-  transform: translateX(0px);
-}
-.wrap .slider input[type=radio]:nth-child(2):checked ~ ul.img {
-  transform: translateX(-600px);
-}
-.wrap .slider input[type=radio]:nth-child(3):checked ~ ul.img {
-  transform: translateX(-1200px);
-}
-.wrap .slider input[type=radio]:nth-child(4):checked ~ ul.img {
-  transform: translateX(-1800px);
-}
-.wrap .slider input[type=radio]:nth-child(5):checked ~ ul.img {
-  transform: translateX(-2400px);
+.spinnerc{
+  width: fit-content;
+margin-right: auto;
+margin-left: auto;
 }

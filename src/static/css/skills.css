@@ -1,0 +1,97 @@
+
+bodya {
+  display : flex;
+  align-items : center;
+  justify-content : center;  
+  flex-wrap: wrap;
+  overflow-y: none;
+  margin-top: 3%;
+}
+#skillname{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+.containerskill {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.containerskill .cards {
+  position: relative;
+  max-width: fit-content;
+  height: 70px;
+  background-color: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 50%);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.containerskill .cards:hover {
+  height : 110px;    
+}
+
+
+.containerskill .cards .image {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  top: -90%;
+  left: auto;
+  right: auto;
+  z-index: 1;
+}
+
+.containerskill .cards .image img {
+  max-width : 100%;
+  border-radius : 15px;
+}
+
+.containerskill .cards .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.containerskill .cards:hover .content {
+   margin-top : 30px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
+
+.star-icon {
+  color: #ccc;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.star-icon.filled {
+  color: #F7A115;
+}
+
+.reviews-text {
+color: #4a4a4a;
+font-size: 14px;
+font-weight: normal;
+text-decoration: underline;
+margin-left: 5px;
+vertical-align: middle;
+}
+

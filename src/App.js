@@ -12,6 +12,7 @@ import {
   Route,
 } from "react-router-dom";
 import Report from './components/Report';
+import { Skill } from './components/Skill';
 function App() {
   const [bgcontent, setbgcontent] = useState('linear-gradient(118deg,#FFDEE9,#B5FFFC)')
   const contentstate=(route)=>{
@@ -53,6 +54,9 @@ function App() {
               </Route>
               <Route exact path="/report">
                 <Report />
+              </Route>
+              <Route exact path="/skill">
+                <Skill />
               </Route>
             </Switch>
           </div>

@@ -27,6 +27,9 @@ export default function Starting(props) {
                     <li className="nav-item">
                         <Link className={`nav-link ${active==="report"?'active':''}` } onClick={()=>activechanger("report")}to="/report">Report</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className={`nav-link ${active==="skill"?'active':''}` } onClick={()=>activechanger("skill")}to="/skill">Skill</Link>
+                    </li>
                 </ul>
             </div>
 
